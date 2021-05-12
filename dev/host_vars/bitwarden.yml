@@ -2,6 +2,9 @@
 allow_reboot: false
 manage_network: false
 
+# nginx proxy
+proxy: helloworld
+
 # docker
 docker_users:
   - vagrant
@@ -13,6 +16,9 @@ traefik_domain: traefik.vm.krislamo.org
 traefik_auth: admin:$apr1$T1l.BCFz$Jyg8msXYEAUi3LLH39I9d1 # admin:admin
 #traefik_acme_email: realemail@example.com # Let's Encrypt settings
 #traefik_production: true
+traefik_ports:
+  - "8000:80"
+  - "4430:443"
 
 # bitwarden
 # Get Installation ID & Key at https://bitwarden.com/host/

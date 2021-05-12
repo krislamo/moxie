@@ -5,6 +5,7 @@
     - host_vars/bitwarden.yml
   roles:
     - base
+    - nginx
     - docker
     - traefik
     - bitwarden
